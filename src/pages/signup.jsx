@@ -11,8 +11,8 @@ export default function Signup() {
       <Background />
       <div className="content">
       <Header />
-      <div className="body flex column a-center j-center">
-        <div className="text flex column"> 
+      <div className="body flex column a-center">
+        <div className="text flex column" style={{margin: '20px'}}> 
           <h1>Unlimited movies, TV shows and more.</h1>
           <h4>Watch anywhere. Cancel anytime.</h4>
           <h6>Ready to watch? Enter your email to create your membership.</h6>

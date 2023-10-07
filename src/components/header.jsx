@@ -25,13 +25,13 @@ padding: 0 5rem;
   }
 }
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   background-color: #e50914;
   border: none;
   cursor: pointer;
   color: white;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   font-weight: bolder;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 `;
