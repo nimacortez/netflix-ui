@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 import Background from '../components/background';
 import Header from '../components/header';
 
 export default function Signup() {
+  const navigate = useNavigate();
   return (
     <Container>
       <Background />
+      <div className="content">
       <Header />
       <div className="body flex column a-center j-center">
         <div className="text flex column"> 
@@ -21,8 +24,21 @@ export default function Signup() {
         </div>
         <button>Log In</button>
       </div>
+      </div>
     </Container>
   )
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  position: relative; 
+    .content {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      height: 100vh;
+      width: 100vw;
+      display: grid; 
+      grid-template-rows: 15vh 85vh;
+    }
+`;
