@@ -27,7 +27,7 @@ export default function Signup() {
             !showPassword && 
           <button onClick={() => setShowPassword(true)}>Get Started</button>}
         </div>
-        <button>Log In</button>
+        <button>Sign Up</button>
       </div>
       </div>
     </Container>
