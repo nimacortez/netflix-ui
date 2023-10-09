@@ -11,6 +11,10 @@ export default function Signup() {
     email: "",
     password: "",
   })
+
+  const handleSignIn = async () => {
+    console.log(formValues);
+  }
   return (
     <Container showPassword={showPassword}>
       <Background />
@@ -27,12 +31,13 @@ export default function Signup() {
         } />
           {
             showPassword &&
-          <input type="password" placeholder="Password" name="password" />}
+          <input type="password" placeholder="Password" name="password" value={formValues.password} onChange={(e) => setFormValues({...formValues,[e.target.name]: e.target.value,})
+        } />}
           {
             !showPassword && 
           <button onClick={() => setShowPassword(true)}>Get Started</button>}
         </div>
-        <button>Sign Up</button>
+        <button onClick={handleSignIn}>Sign Up</button>
       </div>
       </div>
     </Container>
