@@ -23,7 +23,8 @@ export default function Signup() {
           <h6>Ready to watch? Enter your email to create your membership.</h6>
         </div>
         <div className="form text flex column a-center">
-          <input type="email" placeholder="Email Address" name="email" />
+          <input type="email" placeholder="Email Address" name="email" value={formValues.email} onChange={(e) => setFormValues({...formValues,[e.target.name]: e.target.value,})
+        } />
           {
             showPassword &&
           <input type="password" placeholder="Password" name="password" />}
