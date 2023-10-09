@@ -7,6 +7,10 @@ import Header from '../components/header';
 export default function Signup() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false); 
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+  })
   return (
     <Container showPassword={showPassword}>
       <Background />
