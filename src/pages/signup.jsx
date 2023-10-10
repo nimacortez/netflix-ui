@@ -65,6 +65,14 @@ export default function Signup() {
   );
 }
 
+const handleSignIn = async () => {
+  try {
+    const { email, password } = formValues; 
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const Container = styled.div`
   position: relative;
   .content {
