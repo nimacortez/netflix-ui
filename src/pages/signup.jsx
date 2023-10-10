@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Background from '../components/background';
 import Header from '../components/header';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -68,6 +69,7 @@ export default function Signup() {
 const handleSignIn = async () => {
   try {
     const { email, password } = formValues; 
+    await createUserWithEmailAndPassword(firebaseAuth, email, password);
   } catch (error) {
     console.log(error);
   }
