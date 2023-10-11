@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Background from '../components/background';
 import Header from '../components/header';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { firebaseAuth } from "../utilities/firebase-config";
 
 export default function Signup() {
@@ -22,6 +22,12 @@ export default function Signup() {
       console.log(error);
     }
   };
+
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if (currentUser) {
+      navigate('/');
+    }
+  })
 
   return (
     <Container>
