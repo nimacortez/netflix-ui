@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Background from '../components/background';
 import Header from '../components/header';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { firebaseAuth } from "../utilities/firebase-config";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -14,7 +15,12 @@ export default function Signup() {
   });
 
   const handleSignIn = async () => {
-    console.log(formValues);
+    try {
+      const { email, password } = formValues; 
+      await createUserWithEmailAndPassword(firebaseAuth, email, password);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -65,15 +71,6 @@ export default function Signup() {
     </Container>
   );
 }
-
-const handleSignIn = async () => {
-  try {
-    const { email, password } = formValues; 
-    await createUserWithEmailAndPassword(firebaseAuth, email, password);
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 const Container = styled.div`
   position: relative;
