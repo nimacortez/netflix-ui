@@ -8,7 +8,6 @@ import { firebaseAuth } from "../utilities/firebase-config";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
     email: '',
     password: '',
@@ -31,6 +30,42 @@ export default function Login() {
 
   return (
     <Container>
+      <Background />
+      <div className="content">
+        <Header />
+        <div className="form-container flex-column a-center j-center-">
+          <div className="form flex column a-center j-center">
+            <h3>Login</h3>
+          </div>
+          <div className='container flex column'>
+          <input
+              type="email"
+              placeholder="Email address"
+              onChange={(e) =>
+                setFormValues({
+                  ...formValues,
+                  [e.target.name]: e.target.value,
+                })
+              }
+              name="email"
+              value={formValues.email}
+            />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+                name="password"
+                value={formValues.password}
+              />
+              <button>Login</button>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }
