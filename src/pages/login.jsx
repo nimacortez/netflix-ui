@@ -62,7 +62,7 @@ export default function Login() {
                 name="password"
                 value={formValues.password}
               />
-              <button onClick={() => handleLogIn}>Login</button>
+              <button onClick={handleLogIn}>Login</button>
           </div>
         </div>
       </div>
