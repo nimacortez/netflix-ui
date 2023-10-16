@@ -13,7 +13,7 @@ export default function Login() {
     password: '',
   });
 
-  const handleSignIn = async () => {
+  const handleLogIn = async () => {
     try {
       const { email, password } = formValues; 
       await signInWithEmailAndPassword(firebaseAuth, email, password);
@@ -62,7 +62,7 @@ export default function Login() {
                 name="password"
                 value={formValues.password}
               />
-              <button>Login</button>
+              <button onClick={() => handleLogIn}>Login</button>
           </div>
         </div>
       </div>
