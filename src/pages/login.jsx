@@ -39,7 +39,7 @@ export default function Login() {
             <h3>Login</h3>
           </div>
           <div className='container flex column'>
-          <input
+            <input
               type="email"
               placeholder="Email address"
               onChange={(e) =>
@@ -51,7 +51,7 @@ export default function Login() {
               name="email"
               value={formValues.email}
             />
-              <input
+            <input
                 type="password"
                 placeholder="Password"
                 onChange={(e) =>
@@ -62,8 +62,8 @@ export default function Login() {
                 }
                 name="password"
                 value={formValues.password}
-              />
-              <button onClick={handleLogIn}>Login</button>
+            />
+            <button onClick={handleLogIn}>Login</button>
             </div>  
           </div>
         </div>
