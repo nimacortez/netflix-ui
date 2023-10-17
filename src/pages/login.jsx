@@ -89,14 +89,15 @@ const Container = styled.div`
       .form {
         padding: 2rem;
         background-color: #000000b0;
-        width: 25vw;
+        border-radius: 10px;
+        width: 45vw;
         gap: 2rem;
         color: white;
         .container {
-          gap: 2rem;
+          gap: 1.5rem;
           input {
             padding: 0.5rem 1rem;
-            width: 15rem;
+            width: 20rem;
           }
           button {
             padding: 0.5rem 1rem;
