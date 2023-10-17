@@ -100,14 +100,14 @@ const Container = styled.div`
             width: 20rem;
           }
           button {
-            padding: 0.5rem 1rem;
+            padding: 1rem 1rem;
             background-color: #e50914;
             border: none;
             cursor: pointer;
             color: white;
-            border-radius: 0.2rem;
+            border-radius: 0.25rem;
             font-weight: bolder;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
           }
         }
       }
